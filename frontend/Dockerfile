@@ -11,7 +11,7 @@ RUN npm install install
 
 # Copy all files and build the app
 COPY . .
-RUN yarn build
+RUN npm run build
 
 # Serve the app with nginx
 FROM nginx:alpine
