@@ -6,19 +6,22 @@ FROM node:18 as build
 WORKDIR /app
 
 # Install dependencies
-COPY package.json package-lock.json ./
-RUN npm install install
+# COPY package.json package-lock.json ./
+RUN npm install 
 
 # Copy all files and build the app
 COPY . .
-RUN npm run build
+# RUN npm run build
+
+
 
 # Serve the app with nginx
-FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+# FROM nginx:alpine
+# COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose port 80
-EXPOSE 80
+
+EXPOSE 5173
 
 # Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "run", "dev", "--", "--host" ]
