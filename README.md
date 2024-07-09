@@ -18,3 +18,17 @@ To get started with this template, please follow the instructions in the respect
 - [Frontend README](./frontend/README.md)
 - [Backend README](./backend/README.md)
 
+## Base url
+
+https://mayorops.crabdance.com/
+
+## Nginx Proxy server login credentials
+
+url: https://proxy.mayorops.crabdance.com
+
+## Adminer login credentials
+
+url: https://db.mayorops.crabdance.com
+username: postgres
+
+database: app
